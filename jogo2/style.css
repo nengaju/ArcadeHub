@@ -1,0 +1,113 @@
+/* Estilo geral */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#game-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px; /* Reduzido o espaço entre o jogo e a UI */
+}
+
+#game-area {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background-color: #eaf2e0;
+  border: 2px solid #6b8e23;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: background-color 2s ease, filter 2s ease;
+}
+
+/* Ciclo de dia e noite */
+#game-area.night {
+  background-color: #2b3a42;
+  filter: brightness(0.4);
+}
+
+#flowers, #nest {
+  position: absolute;
+  font-size: 40px;
+  z-index: 5;
+}
+
+#flowers {
+  left: 50px;
+  top: 80px;
+}
+
+#nest {
+  left: 500px;
+  top: 300px;
+}
+
+#ants {
+  position: relative;
+  z-index: 4;
+}
+
+.ant {
+  position: absolute;
+  font-size: 20px;
+  transition: transform 0.5s linear;
+}
+
+/* Waypoints */
+.waypoint {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ff4500;
+  border-radius: 50%;
+}
+
+/* Barra lateral */
+#sidebar {
+  width: 200px;
+  background-color: #98fb98;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left: -20px; /* Move a UI mais próxima do jogo */
+}
+
+#sidebar button {
+  padding: 10px;
+  background-color: #6b8e23;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#sidebar button:hover {
+  background-color: #556b2f;
+}
+
+/* Ciclo e relógio */
+#cycle-indicator {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+#time-icon {
+  font-size: 30px;
+}
+
+#clock {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 5px;
+}
